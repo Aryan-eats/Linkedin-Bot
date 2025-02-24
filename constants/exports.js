@@ -1,6 +1,6 @@
 //constants
-import buttons from './buttons.js';
-import filters from './filters.js';
+import { buttonClasses } from './buttons.js';
+import { parentFilters, experienceFilters, datePostedFilters } from './filters.js';
 import { JOBS_URL, LOGIN_URL } from './urls.js';
 
 //config
@@ -11,18 +11,24 @@ import { AUTH_EMAIL, AUTH_PASSWORD, AUTH_JOBTITLE, AUTH_LOCATION, GLOBAL_WAIT_TI
 import afterClickOnEasyApply from '../lib/afterClickOnEasyApply.js';
 import beforeClickOnEasyApply from '../lib/beforeClickOnEasyApply.js';
 import searchJobs from '../lib/searchJobs.js';
-import login from '../lib/login.js';
+import loginToLinkedIn from '../lib/login.js';
 import linkedinBot from '../lib/linkedin.js';
+import setAnswersToFormQuestions from '../lib/setAnswersToFormQuestions.js';
 
 //utils
-import getTotalCountFromText from '../utils/getTotalCountFromText.js';
+import getTextFromSelector from '../utils/getTextFromSelector.js';
 import handleJobSearchQuery from '../utils/handleSearchQuery.js';
-import handleButtonClickFunction from '../utils/handleButtonClickFunction.js';
+import buttonClick from '../utils/handleButtonClickFunction.js';
 import handleFilters from '../utils/handleFilters.js';
 
+//security
+import bypass from '../security/bypass.js';
+
 export {
-    buttons,
-    filters,
+    buttonClasses,
+    parentFilters,
+    experienceFilters,
+    datePostedFilters,
     JOBS_URL,
     LOGIN_URL,
     gotoUrls,
@@ -35,10 +41,12 @@ export {
     afterClickOnEasyApply,
     beforeClickOnEasyApply,
     searchJobs,
-    login,
+    loginToLinkedIn,
     linkedinBot,
-    getTotalCountFromText,
+    setAnswersToFormQuestions,
+    getTextFromSelector,
     handleJobSearchQuery,
-    handleButtonClickFunction,
-    handleFilters
+    buttonClick,
+    handleFilters,
+    bypass
 };
