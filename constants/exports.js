@@ -23,6 +23,7 @@ import getTextFromSelector from '../utils/getTextFromSelector.js';
 import handleJobSearchQuery from '../utils/handleSearchQuery.js';
 import buttonClick from '../utils/handleButtonClickFunction.js';
 import handleFilters from '../utils/handleFilters.js';
+import timeOut from '../utils/timeOut.js';
 
 //security
 import bypass from '../security/bypass.js';
@@ -52,5 +53,6 @@ export {
     handleJobSearchQuery,
     buttonClick,
     handleFilters,
+    timeOut,
     bypass
 };
