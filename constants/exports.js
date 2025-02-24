@@ -1,3 +1,6 @@
+//Puppemaster
+import puppeMaster from '../config/puppeMaster.js';
+
 //constants
 import { buttonClasses } from './buttons.js';
 import { parentFilters, experienceFilters, datePostedFilters } from './filters.js';
@@ -25,6 +28,7 @@ import handleFilters from '../utils/handleFilters.js';
 import bypass from '../security/bypass.js';
 
 export {
+    puppeMaster,
     buttonClasses,
     parentFilters,
     experienceFilters,
