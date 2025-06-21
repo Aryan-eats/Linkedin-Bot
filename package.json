@@ -1,18 +1,19 @@
 {
-  "name": "linkedin",
+  "name": "linkedin-bot-fullstack",
   "version": "1.0.0",
+  "description": "LinkedIn Bot with React frontend and Node.js backend",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install-all": "npm install && cd frontend && npm install && cd ../Backend && npm install",
+    "start-backend": "cd Backend && npm start",
+    "start-frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "build": "cd frontend && npm run build"
   },
-  "keywords": [],
+  "keywords": ["linkedin", "bot", "automation", "react", "nodejs"],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
-}
+} 
